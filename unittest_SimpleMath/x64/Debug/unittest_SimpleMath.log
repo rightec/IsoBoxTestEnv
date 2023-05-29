@@ -1,0 +1,11 @@
+﻿  isolatedBoxCmake.cpp
+C:\Lavoro\Clienti\Techlab\BasicTest\my_project\unittest_SimpleMath\isolatedBoxCmake.cpp(19,49): warning C4305: '=': truncation from 'const double' to 'temp_t'
+C:\Lavoro\Clienti\Techlab\BasicTest\my_project\unittest_SimpleMath\isolatedBoxCmake.cpp(45,16): warning C4244: 'initializing': conversion from 'temp_t' to 'int', possible loss of data
+C:\Lavoro\Clienti\Techlab\BasicTest\my_project\unittest_SimpleMath\isolatedBoxCmake.cpp(46,17): warning C4244: 'initializing': conversion from 'temp_t' to 'int', possible loss of data
+  isolatedBox_actuator.cpp
+  isolatedBox_PID.cpp
+C:\Lavoro\Clienti\Techlab\BasicTest\my_project\unittest_SimpleMath\isolatedBox_PID.cpp(112,12): warning C4804: '<': unsafe use of type 'bool' in operation
+  unittest_SimpleMath.cpp
+  Generating Code...
+C:\Lavoro\Clienti\Techlab\BasicTest\my_project\unittest_SimpleMath\isolatedBox_actuator.cpp(109): warning C4715: 'IsoActuator::setIntensity': not all control paths return a value
+  unittest_SimpleMath.vcxproj -> C:\Lavoro\Clienti\Techlab\BasicTest\my_project\build\x64\Debug\unittest_SimpleMath.exe
