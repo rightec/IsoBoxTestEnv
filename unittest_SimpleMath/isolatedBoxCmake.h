@@ -53,7 +53,7 @@ public:
     */
     temp_t getTargetPoint() { return m_pidActuator.m_targetSetPoint; }
 
-    float applyCompensation(temp_t _temp);
+    temp_t applyCompensation(temp_t _temp);
 
     PID_SET_POINTS_t getDistancePoint(temp_t _temp);
    

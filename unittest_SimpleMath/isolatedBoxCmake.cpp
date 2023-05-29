@@ -63,7 +63,7 @@ PID_SET_POINTS_t isoBoxApi::isoBox::getDistancePoint(temp_t _temp)
     }
     return lretVal;
 }
-float isoBoxApi::isoBox::applyCompensation(float _temp)
+temp_t isoBoxApi::isoBox::applyCompensation(temp_t _temp)
 {   
     /// If it is out of range we should apply compensentaion
     
