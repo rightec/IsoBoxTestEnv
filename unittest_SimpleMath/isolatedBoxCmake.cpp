@@ -14,13 +14,12 @@ using namespace isoBoxApi;
 
 isoBox::isoBox()
 {
-    m_max_interval_temp = ISO_DEF_UNDEF_TEMP;
-    m_min_interval_temp = ISO_DEF_UNDEF_TEMP;
-    m_treshold_cmp_temp = ISO_DEF_TRSH__CMP_TEMP;
+    /// <summary>
+    /// Member initialization
+    /// </summary>
     m_Box_temp = ISO_DEF_UNDEF_TEMP;
     m_initDone = false;
 }
-
 
 bool isoBox::init(temp_t _min, temp_t _max)
 {
@@ -28,6 +27,8 @@ bool isoBox::init(temp_t _min, temp_t _max)
     if (_max > _min) {
         /// <summary>
         /// PID has 2 set points. One for max and on for min
+        /// PID works with application set points that should be
+        /// included in the physical set points range
         /// </summary>
         /// <param name="_min"></param>
         /// <param name="_max"></param>
@@ -39,6 +40,7 @@ bool isoBox::init(temp_t _min, temp_t _max)
     else
         return l_retVal;
 }
+
 PID_SET_POINTS_t isoBoxApi::isoBox::getDistancePoint(temp_t _temp)
 {
     PID_SET_POINTS_t lretVal = PID_MAX_NUM_POINTS;
@@ -63,6 +65,7 @@ PID_SET_POINTS_t isoBoxApi::isoBox::getDistancePoint(temp_t _temp)
     }
     return lretVal;
 }
+
 temp_t isoBoxApi::isoBox::applyCompensation(temp_t _temp)
 {   
     /// If it is out of range we should apply compensentaion

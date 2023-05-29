@@ -1,3 +1,11 @@
+/*****************************************************************//**
+ * \file   isolatedBox_common.h
+ * \brief: Common types, define and class to be used
+ * in the ISOBOX component
+ *
+ * \author F.Morani
+ * \date   May 2023
+***********************************************************************/
 #ifndef _ISO_COMMON_H_
 #define _ISO_COMMON_H_
 

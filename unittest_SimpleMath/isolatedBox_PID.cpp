@@ -1,3 +1,11 @@
+/*****************************************************************//**
+ * \file   isolatedBox_PID.cpp
+ * \brief: Class to manage a generic PID using
+ *  PWM modulation as actuation
+ *
+ * \author F.Morani
+ * \date   May 2023
+***********************************************************************/
 #include "isolatedBox_PID.h"
 
 #ifdef ISO_PRINT_DEBUG
@@ -98,12 +106,21 @@ timeProcess_t PidController::Process(const temp_t _current) {
 
 temp_t PidController::testCurrentTemp(temp_t _curTemp)
 {
+    /// <summary>
+    /// Testing against the application interval
+    /// </summary>
+    /// <param name="_curTemp"></param>
+    /// <returns></returns>
     return m_setPointLimits.validate(_curTemp);
 }
 
-
 temp_t PidController::testSetPoint(const temp_t _input)
 {
+    /// <summary>
+    /// Testing against the physyical interval
+    /// </summary>
+    /// <param name="_input"></param>
+    /// <returns></returns>
     return  m_parameterLimits.validate(_input);
 }
 
@@ -140,6 +157,10 @@ temp_t PidController::setSetPoint(int _point, temp_t _setPoint)
     }
 
 }
+
+/* From here down the following methods are only prepared for future
+ * use in a possible real implementation
+ */
 
 void PidController::setKp(const temp_t _input)
 {
