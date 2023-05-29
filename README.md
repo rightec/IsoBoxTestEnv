@@ -7,6 +7,14 @@ Our goal was to test the isolatedBox_Cmake module (.cpp, .h) togheter with their
 - isolatedBox_actuator module
 - isoalatedBox_common module
 
+The project unittest_SimpleMath repositored built with VS 2019 could be added
+to your GOOGLE TEST environement. 
+
+My google test environment has been build by means of the CMakeLists.txt file in the repository root
+In the root you will find also the Hello_test.cc file used 
+to test the component.
+
+
 # Final Hello Test
 
 Here is the final test session (content of hello_test.cc)
